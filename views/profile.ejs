@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Profile Page</title>
+</head>
+<body>
+    <%- include('common/header'); %>
+    <h1 style="color: rgb(142, 223, 11);">Welcome <%=  user.name %></h1>
+    <h3 style="color: rgb(142, 223, 11);">Your Email : <%=  user.email %></h3>
+    <h3 style="color: rgb(142, 223, 11);">Your City: <%=  user.city %></h3>
+    <h3 style="color: rgb(142, 223, 11);">Skills:</h3>
+    <ul style="color: rgb(142, 223, 11);">
+      <% user.skills.forEach(function(skill) { %>
+        <li><%= skill %></li>
+      <% }); %>
+    </ul>
+    
+   
+</body>
+</html>
